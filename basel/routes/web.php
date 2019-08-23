@@ -20,10 +20,25 @@ Route::get('home-marketplace', 'HomeController@marketplace');
 
 
 
+Route::group(['prefix' => 'shop'], function(){
+    Route::get('banner', 'ShopController@banner');
+    Route::get('grid', 'ShopController@grid');
+    Route::get('quick', 'ShopController@quick');
+    Route::get('masonryalt', 'ShopController@masonryalt');
+    Route::get('hover-info', 'ShopController@hoverInfo');
+    Route::get('color-button', 'ShopController@standard');
+    Route::get('color-button', 'ShopController@standard');
+
+});
 
 
-Route::get('shop-grid', 'ShopController@grid');
-Route::get('shop-quick', 'ShopController@quick');
-Route::get('shop-masonryalt', 'ShopController@masonryalt');
-Route::get('shop-hover-info', 'ShopController@hoverInfo');
-Route::get('shop-color-button', 'ShopController@standard');
+
+
+Route::group(['prefix' => 'my-account'], function(){
+    Route::get('/', 'AccountController@index');
+    Route::get('/orders', 'AccountController@orders');
+    Route::get('/wishlist', 'AccountController@wishlist');
+});
+
+
+
