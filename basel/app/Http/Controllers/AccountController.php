@@ -30,42 +30,23 @@ class AccountController extends Controller
         return view("{$this->view}.wishlist");
     }
 
-    public function show($id)
+    public function viewOrder($reference)
     {
-        //
+        return view("{$this->view}.view-order");
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function address()
     {
-        //
+        return view("{$this->view}.address");
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function editAddress()
     {
-        //
+        return view("{$this->view}.edit-address");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function account()
     {
-        //
+        return view("{$this->view}.edit-account");
     }
 }

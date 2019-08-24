@@ -37,8 +37,14 @@ Route::group(['prefix' => 'shop'], function(){
 Route::group(['prefix' => 'my-account'], function(){
     Route::get('/', 'AccountController@index');
     Route::get('/orders', 'AccountController@orders');
+    Route::get('/view-order/{reference}', 'AccountController@viewOrder');
+    Route::get('/address', 'AccountController@address');
+    Route::get('/edit-address', 'AccountController@editAddress');
+    Route::get('/edit-account', 'AccountController@account');
     Route::get('/wishlist', 'AccountController@wishlist');
 });
 
 
+Route::get('contact', 'PagesController@contact');
+Route::get('contact-2', 'PagesController@contact2');
 
