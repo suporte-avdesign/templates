@@ -44,7 +44,13 @@ Route::group(['prefix' => 'my-account'], function(){
     Route::get('/wishlist', 'AccountController@wishlist');
 });
 
+Route::get('lost-password', 'AuthController@lost');
+
+
 
 Route::get('contact', 'PagesController@contact');
 Route::get('contact-2', 'PagesController@contact2');
 
+Route::group(['prefix' => 'elements'], function(){
+    Route::get('/list-element', 'ElementsController@listElement');
+});
