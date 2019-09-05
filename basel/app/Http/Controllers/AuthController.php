@@ -20,4 +20,10 @@ class AuthController extends Controller
     {
         return view("{$this->view}.lost-password");
     }
+
+    public function reset()
+    {
+        return view("{$this->view}.reset-password");
+    }
+
 }

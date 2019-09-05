@@ -45,6 +45,7 @@ Route::group(['prefix' => 'my-account'], function(){
 });
 
 Route::get('lost-password', 'AuthController@lost');
+Route::get('reset-password', 'AuthController@reset');
 
 
 
